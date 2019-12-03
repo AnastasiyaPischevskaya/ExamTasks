@@ -1,41 +1,60 @@
-body{
+body {
   background: #ccc;
 }
 
-nav a{
+nav {
+  height: 80px;
+  box-shadow: 6px 6px 20px 2px #4a2020;
+  padding: 10px;
+  position: relative;
+}
+
+nav a {
   padding: 8px 10px;
-    color: salmon;
-    text-decoration: none;
-    font-size: 20px;
+  color: salmon;
+  text-decoration: none;
+  font-size: 22px;
 }
 
-#icon{
-    width: 60px;
-    height: 60px;
-    background: rosybrown;
+nav a:hover {
+  background: #ffff;
+  border: 1px solid #ccc;
+}
+
+#icon {
+  width: 60px;
+  height: 60px;
+  background: rosybrown;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width:991px) {
+  nav {
     display: none;
-}
+  }
 
-@media screen  and (max-width:991px) {
-    #menu a{
-      display: none;
-    }
-    #icon{
+  nav a {
+    display: none;
+  }
+
+  #icon {
     display: block;
+  }
+
+  nav.small {
     position: absolute;
-    right: 0;
-    top: 0;
-    }
-
-    #menu.small {
-    position: relative;
-    bottom: 40%;
-    right: 10%;
-    }
- 
-     #menu.small a {
+    right: 17%;
+    width: 150px;
     display: block;
-    text-align: right;    
-    
+  }
+
+  nav.small a {
+    display: block;
+    background: #4a2020;
+    color: #fff;
+    text-align: right;
   }
 }
